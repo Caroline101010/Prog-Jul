@@ -1,0 +1,35 @@
+Snowball 1:
+extends CharacterBody2D
+@export var id := 1
+var Movement_Speed_N = 400
+var piss_N = true
+
+func _ready():
+	global_position = Vector2(0, 0)
+	hide()
+
+func _physics_process(_delta):
+	if SnowballSwitchManager.active_snowball != 1:
+		hide()
+		return
+	else:
+		show()
+		
+	if Input.is_action_just_pressed("Left_Throw"):
+		show()
+		global_position = Vector2(210, 225)
+		velocity.x = -Movement_Speed_N
+		piss_N = true
+	elif Input.is_action_just_pressed("Right_Throw"):
+		show()
+		global_position = Vector2(210, 225)
+		velocity.x = Movement_Speed_N
+		piss_N = true
+	
+	if piss_N == true:
+		move_and_slide()
+	
+	if Input.is_action_just_pressed("Piss"):
+		print("Piss pressed!")
+		SnowballSwitchManager.active_snowball = 2
+		piss_N = false
