@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://b8joyn34n8vw7"]
+
+[ext_resource type="Texture2D" uid="uid://bqf5fa32w2jip" path="res://Assets/People/Oldman_Voksen.png" id="1_5nov2"]
+[ext_resource type="Script" uid="uid://ccbk8jm6weq81" path="res://Script/man_adult.gd" id="1_87k0i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_87k0i"]
+size = Vector2(20, 62.5)
+
+[node name="Man_Adult" type="CharacterBody2D"]
+collision_layer = 2
+script = ExtResource("1_87k0i")
+
+[node name="OldmanVoksen" type="Sprite2D" parent="."]
+position = Vector2(88, 34)
+scale = Vector2(3.5, 3.2)
+texture = ExtResource("1_5nov2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(52, 44.25)
+shape = SubResource("RectangleShape2D_87k0i")

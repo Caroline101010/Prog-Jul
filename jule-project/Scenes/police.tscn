@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://clh60wytdy4it"]
+
+[ext_resource type="Script" uid="uid://dtr63bqh61ulx" path="res://Script/police.gd" id="1_b50pw"]
+[ext_resource type="Texture2D" uid="uid://dgbdxgnn6b1cy" path="res://Assets/People/Police.png" id="1_kjctq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b50pw"]
+size = Vector2(22.5, 59)
+
+[node name="Police" type="CharacterBody2D"]
+collision_layer = 2
+script = ExtResource("1_b50pw")
+
+[node name="Police" type="Sprite2D" parent="."]
+position = Vector2(100, 55)
+scale = Vector2(3.5, 3)
+texture = ExtResource("1_kjctq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(64.75, 62.5)
+shape = SubResource("RectangleShape2D_b50pw")

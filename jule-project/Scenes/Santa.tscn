@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://brjmhxstxkf4s"]
+
+[ext_resource type="Texture2D" uid="uid://elybatnqq3ro" path="res://Assets/People/Santa_Player.png" id="1_g3pfg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_to0y4"]
+size = Vector2(29.5, 81)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+collision_layer = 4
+collision_mask = 4
+
+[node name="SantaPlayer" type="Sprite2D" parent="."]
+position = Vector2(435.00006, 9)
+scale = Vector2(6.0003767, 5.7916665)
+texture = ExtResource("1_g3pfg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(76, 7)
+shape = SubResource("RectangleShape2D_to0y4")
+disabled = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(84, -64)
+zoom = Vector2(2, 2.03)

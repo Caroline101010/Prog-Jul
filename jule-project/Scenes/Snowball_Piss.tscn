@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://dd66pocfshpjm"]
+
+[ext_resource type="Script" uid="uid://un8leodyparf" path="res://Script/snowball_piss.gd" id="1_wh71c"]
+[ext_resource type="Texture2D" uid="uid://dpdvldfdccsc7" path="res://Assets/Other/Snowball_Piss.png" id="1_xknui"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wh71c"]
+
+[node name="Snowball_Piss" type="CharacterBody2D"]
+collision_mask = 2
+script = ExtResource("1_wh71c")
+
+[node name="SnowballPiss" type="Sprite2D" parent="."]
+position = Vector2(49.000008, -52)
+scale = Vector2(2.97, 2.97)
+texture = ExtResource("1_xknui")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_wh71c")
