@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://56mltrba1vws"]
+
+[ext_resource type="Texture2D" uid="uid://b5rnuckpv1a1k" path="res://Assets/People/Boy_Barn.png" id="1_nnfxf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v3xbi"]
+size = Vector2(3.777792, 10.952384)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+collision_layer = 2
+
+[node name="BoyBarn" type="Sprite2D" parent="."]
+position = Vector2(419, 10.999996)
+scale = Vector2(2.9999998, 2.7999997)
+texture = ExtResource("1_nnfxf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(383, 32)
+scale = Vector2(4.499999, 4.199999)
+shape = SubResource("RectangleShape2D_v3xbi")

@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://doc4lhtnpjv23"]
+
+[ext_resource type="Script" uid="uid://blfgw6jvr14y5" path="res://Script/woman_adult.gd" id="1_ht2o0"]
+[ext_resource type="Texture2D" uid="uid://daxwaqxmropd6" path="res://Assets/People/OldWoman_Voksen.png" id="1_x3avh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ht2o0"]
+size = Vector2(22, 86.5)
+
+[node name="Woman_Adult" type="CharacterBody2D"]
+collision_layer = 2
+script = ExtResource("1_ht2o0")
+
+[node name="OldWomanVoksen" type="Sprite2D" parent="."]
+position = Vector2(87, 27)
+scale = Vector2(3.5, 3.2)
+texture = ExtResource("1_x3avh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(46, 54.25)
+shape = SubResource("RectangleShape2D_ht2o0")
